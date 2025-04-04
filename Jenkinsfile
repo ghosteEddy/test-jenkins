@@ -4,8 +4,10 @@ def getRepoName() {
 }
 
 def getBranchName() {
-    def branch = sh(script: "git rev-parse --abbrev-ref HEAD", returnStdout: true).trim()
-    return branch
+    if (env.BRANCH_NAME) {
+        return env.BRANCH_NAME
+    }
+    return sh(script: "git rev-parse --abbrev-ref HEAD", returnStdout: true).trim()
 }
 
 node {
