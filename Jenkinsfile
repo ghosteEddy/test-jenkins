@@ -3,6 +3,6 @@ node {
         echo("Hello")
     }
     stage("Check docker"){
-        docker container ls
+        "docker container ls".execute()
     }
 }
