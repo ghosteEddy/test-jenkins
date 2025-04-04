@@ -9,6 +9,6 @@ node {
     stage("Building image"){
 
         sh 'docker build -t .'
-        sh 'docker image ls'
+        sh 'docker image ls | grep docker'
     }
 }
