@@ -4,11 +4,10 @@ node {
     }
     stage("check workpath"){
         sh 'pwd'
-        sh 'ls -al'
+        sh 'ls -al | grep docker'
     }
     stage("Building image"){
-
-        sh 'docker build -t .'
-        sh 'docker image ls | grep docker'
+        sh 'docker build .'
+        sh 'docker image ls'
     }
 }
