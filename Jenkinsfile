@@ -1,3 +1,5 @@
-stage("Warm up"){
-    echo("Hello")
+node {
+    stage("Warm up"){
+        echo("Hello")
+    }
 }
