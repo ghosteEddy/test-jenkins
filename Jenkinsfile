@@ -22,7 +22,7 @@ node {
     stage("Building image"){
         def repoName = getRepoName()
         def branch = getBranchName()
-        sh 'docker build -t ${repoName}:${branch} .'
+        sh "docker build -t ${repoName}:${branch} ."
         sh 'docker image ls'
     }
 }
