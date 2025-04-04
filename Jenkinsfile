@@ -13,10 +13,8 @@ node {
         echo("Hello")
     }
     stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
+        checkout scm
+    }
     stage("check workpath"){
         sh 'pwd'
         sh 'ls -al'
