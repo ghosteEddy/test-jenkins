@@ -3,6 +3,7 @@ node {
         echo("Hello")
     }
     stage("Building image"){
-        "docker build .".execute()
+        sh 'docker build .'
+        sh 'docker image ls'
     }
 }
